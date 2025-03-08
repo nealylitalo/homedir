@@ -1,9 +1,10 @@
 #!/bin/bash
 
 for filename in `cat symlinks` ; do
-	if [[ -f $filename || -d $filename ]] ; then
-		rm -rf $filename
+	if [[ -f ~/$filename || -d ~/$filename || -L ~/$filename ]] ; then
+		rm -rfv ~/$filename
 	fi
 
-	ln -s ./$filename ~/$filename
+	# -v prints the name of the symlink it creates
+	ln -s -v ./$filename ~/$filename
 done

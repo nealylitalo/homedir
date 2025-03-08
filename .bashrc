@@ -117,7 +117,7 @@ export SCREENDIR=$HOME/.screen
 export EDITOR=vim
 export SYSTEMD_EDITOR=vim
 
-alias ls='ls -lh --color=auto --group-directories-first'
+alias ls='ls -lhv --color=auto --group-directories-first'
 alias screen='screen -U -e^Ee'
 alias grep='grep --color=auto'
 alias less='less -L'
