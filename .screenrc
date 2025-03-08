@@ -1,0 +1,9 @@
+caption always "%{= bb}%{+b w} %=%{=b } %{+b} ${USER}@%H%{= dg} %c"
+hardstatus alwayslastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
+
+startup_message off
+chdir
+autodetach on
+deflogin off
+
+term screen-256color
