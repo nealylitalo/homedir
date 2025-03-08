@@ -117,7 +117,14 @@ export SCREENDIR=$HOME/.screen
 export EDITOR=vim
 export SYSTEMD_EDITOR=vim
 
+if [[ -f ~/.screenescapechar ]] ; then
+	escapechar=`cat ~/.screenescapechar`
+else
+	escapechar="a"
+fi
+escapesequence="^${escapechar^^}${escapechar}"
+
 alias ls='ls -lhv --color=auto --group-directories-first'
-alias screen='screen -U -e^Ee'
+alias screen="screen -U -e${escapesequence}"
 alias grep='grep --color=auto'
 alias less='less -L'
